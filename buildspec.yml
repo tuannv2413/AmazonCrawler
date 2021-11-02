@@ -10,5 +10,5 @@ phases:
       - echo Build completed successfully
 artifacts:
   files:
-    - CrawlerAmazon/target/crawler-amazon.jar
+    - target/crawler-amazon.jar
   discard-paths: yes
