@@ -34,19 +34,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/crawl/product").hasRole("ADMIN")
-                .antMatchers("/crawl/crawl-data").hasRole("ADMIN")
+                .antMatchers("/product").hasRole("ADMIN")
+                .antMatchers("/crawl").hasRole("ADMIN")
                 .antMatchers("/resources/**").permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/crawl/login")
+                .loginPage("/login")
                 .usernameParameter("username")
                 .passwordParameter("password")
-                .defaultSuccessUrl("/crawl/product")
-                .failureUrl("/crawl/login?error")
+                .defaultSuccessUrl("/product")
+                .failureUrl("/login?error")
                 .and()
                 .exceptionHandling()
-                .accessDeniedPage("/crawl/403")
+                .accessDeniedPage("/403")
                 .and()
                 .csrf().disable();
     }

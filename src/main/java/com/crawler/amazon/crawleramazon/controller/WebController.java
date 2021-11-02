@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
-@RequestMapping(value = "/crawl")
+@RequestMapping()
 public class WebController {
 
     @GetMapping(value = "/login")
@@ -30,7 +30,7 @@ public class WebController {
         if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }
-        return "redirect:/crawl/login";
+        return "redirect:/login";
     }
 
     @GetMapping(value = "/product")
@@ -38,7 +38,7 @@ public class WebController {
         return "product";
     }
 
-    @GetMapping(value = "/crawl-data")
+    @GetMapping(value = "/crawl")
     public String crawlData(){
         return "crawl-data";
     }
