@@ -1,0 +1,87 @@
+
+.d-body {
+    position: absolute;
+    top: 56px;
+    width: 98%;
+}
+
+.d-form {
+    margin-top: 50px;
+}
+
+.form-group {
+    /* Form group*/
+    position: relative;
+    margin-bottom: 1px !important;
+}
+
+.form-group label {
+    /* Input field floating label */
+    position: absolute;
+    font-size: 0.8em;
+    top: 0px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 5px 0 10px 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    /* prevent flickering */
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.form-control {
+    /* Form control fields */
+    height: 50px;
+    padding: 15px 10px;
+    box-shadow: 0 0 0 2px transparent;
+    transition: all 0.2s ease-out;
+}
+
+.form-control:focus {
+    /* Focus state for form-control fields */
+    box-shadow: 0 0 0 2px #000066;
+    outline: transparent;
+    border-color: transparent;
+}
+
+.help-block-inline {
+    /* Inline help block */
+    position: absolute;
+    top: 0;
+    right: 25px;
+    line-height: 50px;
+    margin: 0;
+    font-size: 90%;
+    color: #ccc;
+}
+
+.help-block-background {
+    right: 0;
+    background-color: #eee;
+    color: #555;
+    border-radius: 0 3px 3px 0;
+    height: 48px;
+    margin: 1px;
+    padding: 0 12px;
+}
+
+button {
+    padding: 4px 16px;
+    border: 1px solid #ff6600;
+    border-radius: 4px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+#error-url {
+    color: red;
+}
+
+#d-error {
+    text-align: left;
+    padding-left: 10px;
+    display: none;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Crawler</title>
+
+    <!--    Bootstrap & Jquery-->
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.min.css">
+    <script src="/assets/jquery/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/css/product.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="/js/product.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <header class="fixed-top container-fluid">
+        <nav class="navbar navbar-expand-lg fixed-top container-fluid" id="nav">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="/crawl/product">AMAZON CRAWLER</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse"
+                        aria-controls="nvbCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nvbCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active pl-1" id="menu-1">
+                            <a class="nav-link" href="/crawl/product"><i class="fa fa-home fa-fw mr-1"></i>Product</a>
+                        </li>
+                        <li class="nav-item pl-1" id="menu-2">
+                            <a class="nav-link" href="/crawl/crawl-data"><i class="fa fa-th-list fa-fw mr-1"></i>Crawl</a>
+                        </li>
+                        <li class="nav-item pl-1" id="menu-3">
+                            <a class="nav-link" href="/crawl/logout"><i class="fa fa-th-list fa-fw mr-1"></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="d-body">
+        <div class="row mt-3 mb-4">
+            <div class="col-2 d-filter" style="border-right: 1px solid #dddddd;">
+                <div style="float: right; width: 80%">
+                    <div class="d-text-filter">
+                        <span>Filter Product</span>
+                    </div>
+                    <div>
+                        <ul class="arrow">
+                            <li class="l-clear" onclick="clearSort()">Clear</li>
+                            <li>
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="ranking" id="ranking"
+                                           onclick="sortRanking()"> Ranking
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 d-products">
+                <div class="row d-frame" id="products"></div>
+                </br>
+                <div class="d-pagination" id="i-pagination">
+                    <ul class="pagination" id="pagination"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
