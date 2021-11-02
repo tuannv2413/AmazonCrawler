@@ -109,7 +109,7 @@ function servicePagination(currentPage, totalPage) {
         }
         pagination(start,totalPage,currentPage, 1, checkPageStart, checkPageEnd);
     } else if (totalPage > 10 && currentPage + 1 > totalPage - 10) {
-        pagination(totalPage-10,totalPage-1,currentPage, 2, checkPageStart, checkPageEnd);
+        pagination(totalPage-10,totalPage,currentPage, 2, checkPageStart, checkPageEnd);
     } else if (totalPage < 10) {
         pagination(1,totalPage,currentPage, 3, checkPageStart, checkPageEnd);
     }
@@ -145,7 +145,7 @@ function checkPageEnd(pageEnd, end) {
     let attribute = ``;
 
     if (pageEnd == 2) {
-        attribute += `<li><a id="next" onclick="init(${end},limit,sort)">>></a></li>`
+        attribute += `<li><a id="next" onclick="init(${end-1},limit,sort)">>></a></li>`
     }
     if (pageEnd == 0) {
         attribute += `<li><a id="next" onclick="init(page+1,limit,sort)">>></a></li>`
