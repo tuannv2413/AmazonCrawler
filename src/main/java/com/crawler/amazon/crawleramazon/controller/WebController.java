@@ -33,7 +33,7 @@ public class WebController {
         return "redirect:/login";
     }
 
-    @GetMapping(value = "/product")
+    @GetMapping(value = {"/","/product"})
     public String product(){
         return "product";
     }
